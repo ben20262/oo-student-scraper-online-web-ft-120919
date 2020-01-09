@@ -28,5 +28,5 @@ class Scraper
   #   doc.css("div.social-icon.a").each do |social|
   #     link = social.attribute("href").value
   #   end
-  # end
+  end
 end
