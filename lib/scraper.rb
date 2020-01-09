@@ -31,7 +31,7 @@ class Scraper
       if key == "twitter" || key == "linkedin" || key == "github"
         hash[key] = link
       else
-        hash[blog] = link
+        hash["blog"] = link
       end
     end
     hash
