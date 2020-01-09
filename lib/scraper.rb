@@ -25,7 +25,8 @@ class Scraper
     hash = {}
     hash[:profile_quote] = doc.css("div.vitals-text-container div.profile-quote").text
     hash[:bio] = doc.css("div.bio-content p").text
-
-
+    doc.css("div.social-icon.a").each do |social|
+      link = social.attribute("href").value
+    end
   end
 end
