@@ -27,6 +27,12 @@ class Scraper
     hash[:bio] = doc.css("div.bio-content p").text
     doc.css("div.social-icon-container a").each do |social|
       link = social.attribute("href").value
+      key = link.split("/")[2].chomp(".com")
+      if key == "twitter" || key == "linkedin" || key == "github"
+        hash[key] = link
+      else
+        hash[blog] = link
+      end
     end
   end
 end
