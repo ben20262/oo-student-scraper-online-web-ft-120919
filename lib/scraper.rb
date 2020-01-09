@@ -34,5 +34,6 @@ class Scraper
         hash[blog] = link
       end
     end
+    hash
   end
 end
