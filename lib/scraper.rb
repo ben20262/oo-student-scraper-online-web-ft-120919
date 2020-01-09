@@ -26,6 +26,7 @@ class Scraper
     doc.css("div.social-icon-container a").each do |social|
       link = social.attribute("href").value
       key = link.split("/")[2].chomp(".com")
+      key = key.split(".")[1] if key.include?("www.")
       binding.pry
       if key == "twitter"
         hash[:twitter] = link
