@@ -23,7 +23,9 @@ class Scraper
     binding.pry
 
     hash = {}
-    # hash[:profile_quote] = doc.css("div.vitals-text-container div.profile-quote").text
-    # hash[:bio] = doc.css("div.bio-content content-holder p").text
+    hash[:profile_quote] = doc.css("div.vitals-text-container div.profile-quote").text
+    hash[:bio] = doc.css("div.bio-content p").text
+
+
   end
 end
